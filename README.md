@@ -1,4 +1,4 @@
-# ISTI-TEST
+# ISITEL-TEST
 
 #### Muhammad Rafly Afrizal Pratama
 
@@ -9,7 +9,7 @@
 Untuk membangun Docker image, jalankan perintah berikut:
 
 ```
-docker build --no-cache -t isti-test:latest .
+docker build --no-cache -t isitel-test:latest .
 ```
 
 2. **Jalankan Docker Compose**
