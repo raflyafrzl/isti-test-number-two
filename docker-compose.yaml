@@ -1,9 +1,9 @@
 version: '3'
 services:
   app:
-    image: isti-test:latest
+    image: isitel-test:latest
     environment:
-       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/isti_test?schema=public
+       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/isitel_test?schema=public
        JWT_KEY: thisissecretkey 
        CLOUDINARY_NAME: duwo3y0jv
        CLOUDINARY_API_KEY: 482598322898765
@@ -16,11 +16,11 @@ services:
   
   postgres:
     image: postgres:latest
-    container_name: postgres-isti
+    container_name: postgres-isitel
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
-      POSTGRES_DB: isti_test
+      POSTGRES_DB: isitel_test
     ports:
       - 5433:5432
     volumes:
