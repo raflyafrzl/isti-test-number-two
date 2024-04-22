@@ -1,0 +1,28 @@
+version: '3'
+services:
+  app:
+    image: isti-test:latest
+    environment:
+       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/isti_test?schema=public
+       JWT_KEY: thisissecretkey 
+       CLOUDINARY_NAME: duwo3y0jv
+       CLOUDINARY_API_KEY: 482598322898765
+       CLOUDINARY_API_SECRET: SHcP9KqZbFsksJ4VCW4RaplZwGE
+    ports:
+      - 3000:3000
+    depends_on: 
+     - postgres
+     
+  
+  postgres:
+    image: postgres:latest
+    container_name: postgres-isti
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: isti_test
+    ports:
+      - 5433:5432
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
